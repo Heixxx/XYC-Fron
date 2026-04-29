@@ -1,0 +1,378 @@
+{
+  "nav": {
+    "overview": "Podgląd",
+    "news": "Wiadomości",
+    "forex": "Forex",
+    "crypto": "Krypto",
+    "search": "Szukaj",
+    "whales": "Wieloryby",
+    "signals": "Sygnały",
+    "vision": "Wizja",
+    "logicLab": "Laboratorium Logiki",
+    "marketNews": "Wiadomości Rynkowe",
+    "forexMarkets": "Rynki Forex",
+    "cryptoMarkets": "Rynki Krypto",
+    "marketSearch": "Wyszukiwanie Rynkowe",
+    "whaleTracking": "Śledzenie Wielorybów",
+    "chartVision": "Analiza Wykresów"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Błąd",
+    "retry": "Ponów",
+    "refresh": "Odśwież",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "close": "Zamknij",
+    "open": "Otwarte",
+    "closed": "Zamknięte",
+    "live": "Na żywo",
+    "offline": "Offline",
+    "disconnected": "Rozłączony",
+    "search": "Szukaj",
+    "searchPlaceholder": "Szukaj EUR/USD, BTC, Złoto, Ropa...",
+    "all": "Wszystkie",
+    "buy": "KUP",
+    "sell": "SPRZEDAJ",
+    "hold": "TRZYMAJ",
+    "bullish": "Byczsy",
+    "bearish": "Niedźwiedzi",
+    "neutral": "Neutralny",
+    "language": "Język",
+    "english": "English",
+    "polish": "Polski",
+    "viewAll": "Zobacz Wszystkie",
+    "reconnect": "Połącz ponownie",
+    "next": "Następny",
+    "of": "z"
+  },
+  "overview": {
+    "title": "FOREXAI Terminal",
+    "subtitle": "Rynkowa inteligencja w czasie rzeczywistym wspierana przez AI",
+    "marketStatus": "Rynki",
+    "utcTime": "Czas UTC",
+    "aiSignals": "Sygnały AI",
+    "latestNews": "Najnowsze Wiadomości",
+    "marketSummary": "Podsumowanie Rynku",
+    "forexPairs": "Pary Forex",
+    "cryptoAssets": "Aktywa Krypto",
+    "connecting": "Łączenie z danymi rynkowymi...",
+    "marketOpen": "Rynki Otwarte",
+    "marketClosed": "Rynki Zamknięte",
+    "status": {
+      "online": "Wszystkie systemy sprawne",
+      "degraded": "Niektóre źródła danych opóźnione",
+      "offline": "Dane rynkowe niedostępne"
+    },
+    "greeting": {
+      "morning": "Dzień Dobry",
+      "afternoon": "Dzień Dobry",
+      "evening": "Dobry Wieczór"
+    },
+    "viewAll": "Zobacz Wszystkie",
+    "lastUpdated": "Ostatnia aktualizacja",
+    "wsConnected": "WebSocket: Połączony",
+    "ensembleActive": "5-Warstwowy Zespół AI aktywny",
+    "aiEngineStatus": "Status Silnika AI",
+    "lastAnalysis": "Ostatnia analiza",
+    "quickAccess": "Szybki Dostęp"
+  },
+  "news": {
+    "title": "Wiadomości FOREXAI",
+    "edition": {
+      "morning": "Poranna",
+      "noon": "Południowa",
+      "evening": "Wieczorna"
+    },
+    "executiveSummary": "Podsumowanie",
+    "deepDive": {
+      "macro": "Krajobraz Makro",
+      "technical": "Poziomy Techniczne",
+      "centralBank": "Obserwatorium Banków Centralnych",
+      "commodities": "Sekcja Towarowa"
+    },
+    "sentiment": "Sentyment Rynkowy",
+    "blackRock": {
+      "title": "Perspektywa Instytucjonalna BlackRock",
+      "quote": "Widzimy selektywne możliwości w instrumentach stałego dochodu, ponieważ rentowności pozostają podwyższone. Strategia Fed wyżej-dłużej wspiera dolara, ale tworzy operacje dywergencji.",
+      "points": [
+        "Przewaga rentownościowa USD względem G10",
+        "Dyferencjacja jakości kredytowej jest kluczowa",
+        "Ryzyko duration powinno być aktywnie zarządzane",
+        "Rynki wschodzące selektywnie na podstawie fundamentów",
+        "Waluty powiązane z towarami wspierane",
+        "Hedging portfelowy pozostaje opłacalny"
+      ]
+    },
+    "keyLevels": "Kluczowe Poziomy",
+    "generated": "Wygenerowano",
+    "listen": "Słuchaj",
+    "playing": "Odtwarzanie briefingu...",
+    "nextEdition": "Następna edycja za",
+    "pageTitle": "Intelligence Rynkowe",
+    "pageSubtitle": "Dzienne briefingi wspierane przez AI",
+    "pause": "Pauza",
+    "listenTooltip": "Odtwórz briefing",
+    "generatingEdition": "Generowanie",
+    "topStories": "Najważniejsze Wiadomości",
+    "deepDiveTitle": "Dogłębna Analiza",
+    "editionBadge": "Edycja",
+    "generatedAt": "Wygenerowano",
+    "sentimentLabel": "Sentyment",
+    "countdown": "Następna edycja za"
+  },
+  "forex": {
+    "title": "Rynki Forex",
+    "source": "Źródło",
+    "spotlight": "Wyróżnione",
+    "allPairs": "Wszystkie Pary",
+    "pair": "Para",
+    "price": "Kurs",
+    "change": "Zmiana",
+    "high": "Maks.",
+    "low": "Min.",
+    "open": "Otwarcie",
+    "strength": "Siła",
+    "expanded": "Widok Rozszerzony",
+    "nicknames": {
+      "EUR/USD": "Fibre",
+      "GBP/USD": "Cable",
+      "USD/JPY": "Ninja",
+      "XAU/USD": "Złoto"
+    },
+    "subtitle": "par walutowych • Kursy w czasie rzeczywistym",
+    "categories": {
+      "all": "Wszystkie",
+      "major": "Główne",
+      "cross": "Krzyżowe",
+      "exotic": "Egzotyczne"
+    },
+    "pairCount": "par",
+    "loadingRates": "Ładowanie kursów...",
+    "sourceLabel": "Źródło"
+  },
+  "crypto": {
+    "title": "Rynki Krypto",
+    "stats": {
+      "marketCap": "Kapitalizacja Rynku",
+      "fearGreed": "Strach i Chciwość",
+      "activePairs": "Aktywne Pary",
+      "greed": "Chciwość",
+      "fear": "Strach"
+    },
+    "orderBook": "Księga Zleceń",
+    "depthChart": "Wykres Głębokości",
+    "topMovers": "Największe Zmiany",
+    "price": "Cena",
+    "change24h": "Zmiana 24h",
+    "volume": "Wolumen",
+    "subtitle": "20 par Binance • WebSocket na żywo",
+    "reconnect": "Połącz ponownie",
+    "pair": "Para",
+    "high24h": "Maks. 24h",
+    "low24h": "Min. 24h",
+    "wsRealtime": "WebSocket na żywo"
+  },
+  "search": {
+    "title": "Wyszukiwanie Rynkowe",
+    "searchInstruments": "Szukaj Instrumentów",
+    "trendAnalysis": "Analiza Trendu",
+    "whaleActivity": "Aktywność Wielorybów",
+    "relatedInstruments": "Powiązane Instrumenty",
+    "subtitle": "Szukaj dowolnego instrumentu — forex, krypto, złoto, towary",
+    "emptyState": "Zacznij pisać, aby wyszukać instrumenty",
+    "trySearching": "Spróbuj: BTC, Złoto, EUR/USD, SOL, Ropa, XRP..."
+  },
+  "whales": {
+    "title": "Śledzenie Wielorybów",
+    "filter": {
+      "all": "Wszystkie Przepływy",
+      "inflows": "Wpływy",
+      "outflows": "Wypływy",
+      "large": "Duże (>1B)"
+    },
+    "flowVisualization": "Pule Instytucjonalne",
+    "transactions": "Ostatnie Transakcje",
+    "aiAnalysis": "Analiza AI",
+    "generated": "Wygenerowano",
+    "institutional": "Instytucjonalne",
+    "inflow": "Wpływ",
+    "outflow": "Wypływ",
+    "subtitle": "Monitorowanie przepływów instytucjonalnych • Analiza AI",
+    "trackedToday": "śledzonych dzisiaj",
+    "netFlow": "Saldo Przepływów",
+    "filterLabel": "Filtr",
+    "showingTransactions": "Wyświetlanie {{count}} transakcji"
+  },
+  "signals": {
+    "title": "Centrum Sygnałów AI",
+    "subtitle": "5-Warstwowy Zespół AI",
+    "ensemble": "Zespół",
+    "filter": {
+      "all": "Wszystkie Kierunki",
+      "buy": "Kup",
+      "sell": "Sprzedaj",
+      "hold": "Trzymaj"
+    },
+    "sort": {
+      "newest": "Najnowsze",
+      "confidence": "Pewność",
+      "instrument": "Instrument"
+    },
+    "timeframe": {
+      "today": "Dzisiaj",
+      "week": "Ten Tydzień",
+      "all": "Całość"
+    },
+    "minConfidence": "Min. Pewność",
+    "confidence": "Pewność",
+    "entry": "Wejście",
+    "target": "Cel",
+    "stop": "Stop",
+    "spread": "Spread",
+    "layer0": "Warstwa 0",
+    "layer1": "Warstwa 1",
+    "layer2": "Warstwa 2",
+    "layer3": "Warstwa 3",
+    "layer4": "Warstwa 4",
+    "pending": "Oczekuje",
+    "status": {
+      "fresh": "Świeży",
+      "aging": "Starzejący się",
+      "expiring": "Wygasający",
+      "expired": "Wygasł"
+    },
+    "paused": {
+      "forex": "Auto-odświeżanie forex wstrzymane — aktywne Pn–Pt 07:00–16:00. Kliknij Odśwież, aby wygenerować sygnał na żądanie.",
+      "crypto": "Auto-odświeżanie krypto wstrzymane — aktywne codziennie 07:00–16:00. Kliknij Odśwież, aby wygenerować sygnał na żądanie."
+    },
+    "manual": "RĘCZNY",
+    "autoRefreshIn": "Auto-odświeżenie za",
+    "noSignals": "Brak sygnałów pasujących do filtrów.",
+    "pipeline": {
+      "layer0": "Analiza Techniczna",
+      "layer1": "Zwiad Makro",
+      "layer2": "Rozpoznawanie Wzorców",
+      "layer3": "Synteza",
+      "layer4": "Ostateczny Werdykt"
+    },
+    "refreshTitle": "Odśwież sygnały",
+    "description": "Konsensus wielomodelowej AI dla sygnałów rynkowych",
+    "activeCount": "{{count}} Aktywnych",
+    "winRate": "{{rate}}% Skuteczność",
+    "lastRun": "Ostatnie uruchomienie: {{minutes}} min temu",
+    "pipelineLabel": "Potok",
+    "minLabel": "Min",
+    "ensembleToggle": "Zespół",
+    "active": "Aktywne"
+  },
+  "vision": {
+    "title": "Wizja Wykresu",
+    "subtitle": "Analiza wykresów wspierana przez AI z nakładkami wizualnymi",
+    "dropzone": "Upuść wykres tutaj",
+    "dropActive": "Upuść, aby przeanalizować",
+    "claudeReady": "Claude Vision: Gotowy",
+    "claudeAnalyzing": "Claude Vision: Analizuje...",
+    "supportedFormats": "Obsługiwane: PNG, JPG, WEBP",
+    "pasteScreenshot": "Lub wklej zrzut ekranu (Ctrl+V)",
+    "assessment": "Ocena Ogólna",
+    "keyLevels": "Kluczowe Poziomy",
+    "patternRecognition": "Rozpoznawanie Wzorców",
+    "trendAnalysis": "Analiza Trendu",
+    "recommendation": "Rekomendacja",
+    "showRaw": "Pokaż Surową Analizę",
+    "hideRaw": "Ukryj Surową Analizę",
+    "recentAnalyses": "Ostatnie Analizy",
+    "sentiment": "Sentyment",
+    "score": "Wynik",
+    "analysesCached": "{{count}}/20 analiz w pamięci",
+    "newChart": "Nowy Wykres",
+    "analysisComplete": "Analiza zakończona",
+    "analyzing": "Analizowanie...",
+    "analyzingHint": "Może potrwać 10-30 sekund",
+    "analysisFailed": "Analiza nie powiodła się",
+    "uploadPrompt": "Prześlij wykres, aby zobaczyć analizę",
+    "overallAssessment": "Ocena Ogólna",
+    "confidence": "Pewność",
+    "supports": "Wsparcia",
+    "resistances": "Opory",
+    "noSupports": "Nie wykryto wyraźnych wsparć",
+    "noResistances": "Nie wykryto wyraźnych oporów",
+    "noPatterns": "Nie wykryto wyraźnych wzorców",
+    "primary": "Pierwotny",
+    "secondary": "Wtórny",
+    "trendStrength": "Siła Trendu",
+    "entry": "Wejście",
+    "stopLoss": "Stop Loss",
+    "riskReward": "R:R"
+  },
+  "logicLab": {
+    "title": "Laboratorium Logiki",
+    "subtitle": "Wieloagentowa Debata AI i Wnioskowanie",
+    "placeholderActive": "Wyślij wiadomość do debaty...",
+    "placeholderIdle": "Wpisz temat rynkowy do debaty...",
+    "session": {
+      "active": "Sesja Aktywna",
+      "idle": "Bezczynna"
+    },
+    "agents": {
+      "bull": "Adwokat Byka",
+      "bear": "Adwokat Niedźwiedzia",
+      "neutral": "Analityk Neutralny",
+      "arbitrator": "Arbiter",
+      "bullShort": "Byk",
+      "bearShort": "Niedźwiedź",
+      "neutralShort": "Neutralny"
+    },
+    "status": {
+      "thinking": "Myśli...",
+      "speaking": "Mówi",
+      "idle": "Bezczynny"
+    },
+    "verdict": {
+      "title": "Ostateczny Werdykt",
+      "viewReasoning": "Zobacz Pełne Uzasadnienie",
+      "hideReasoning": "Ukryj Pełne Uzasadnienie"
+    },
+    "description": "3 agenty AI debatują scenariusze rynkowe. Kimi arbitruje.",
+    "agentsActive": "{{count}}/4 Aktywnych Agentów",
+    "roundOf": "Runda {{current}} z {{total}}",
+    "debateTranscript": "Transkrypcja Debaty",
+    "stop": "Zatrzymaj",
+    "startDebate": "Rozpocznij Debatę",
+    "nextRound": "Następna Runda",
+    "roundsLabel": "Rundy",
+    "pastSessions": "Poprzednie Sesje",
+    "tableHeaders": {
+      "topic": "Temat",
+      "agents": "Agenci",
+      "rounds": "Rundy",
+      "outcome": "Wynik",
+      "date": "Data"
+    },
+    "roleLabels": {
+      "bull": "Byk",
+      "bear": "Niedźwiedź",
+      "neutral": "Neutralny",
+      "arbitrator": "Arbiter"
+    }
+  },
+  "footer": {
+    "apis": "Źródła Danych",
+    "yahooFinance": "Yahoo Finance",
+    "binance": "Binance",
+    "perplexity": "Perplexity",
+    "deepSeek": "DeepSeek",
+    "claude": "Claude"
+  },
+  "time": {
+    "nextUpdate": "Następna aktualizacja za",
+    "lastUpdate": "Ostatnia aktualizacja",
+    "utc": "UTC"
+  },
+  "edition": {
+    "morning": "Poranna",
+    "noon": "Południowa",
+    "evening": "Wieczorna"
+  }
+}

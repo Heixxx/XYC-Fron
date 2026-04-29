@@ -1,0 +1,378 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "news": "News",
+    "forex": "Forex",
+    "crypto": "Crypto",
+    "search": "Search",
+    "whales": "Whales",
+    "signals": "Signals",
+    "vision": "Vision",
+    "logicLab": "Logic Lab",
+    "marketNews": "Market News",
+    "forexMarkets": "Forex Markets",
+    "cryptoMarkets": "Crypto Markets",
+    "marketSearch": "Market Search",
+    "whaleTracking": "Whale Tracking",
+    "chartVision": "Chart Vision"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "refresh": "Refresh",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "open": "Open",
+    "closed": "Closed",
+    "live": "Live",
+    "offline": "Offline",
+    "disconnected": "Disconnected",
+    "search": "Search",
+    "searchPlaceholder": "Search EUR/USD, BTC, Gold, Oil...",
+    "all": "All",
+    "buy": "BUY",
+    "sell": "SELL",
+    "hold": "HOLD",
+    "bullish": "Bullish",
+    "bearish": "Bearish",
+    "neutral": "Neutral",
+    "language": "Language",
+    "english": "English",
+    "polish": "Polish",
+    "viewAll": "View All",
+    "reconnect": "Reconnect",
+    "next": "Next",
+    "of": "of"
+  },
+  "overview": {
+    "title": "FOREXAI Terminal",
+    "subtitle": "Real-time market intelligence powered by AI",
+    "marketStatus": "Markets",
+    "utcTime": "UTC Time",
+    "aiSignals": "AI Signals",
+    "latestNews": "Latest News",
+    "marketSummary": "Market Summary",
+    "forexPairs": "Forex Pairs",
+    "cryptoAssets": "Crypto Assets",
+    "connecting": "Connecting to market data...",
+    "marketOpen": "Markets Open",
+    "marketClosed": "Markets Closed",
+    "status": {
+      "online": "All systems operational",
+      "degraded": "Some data sources delayed",
+      "offline": "Market data unavailable"
+    },
+    "greeting": {
+      "morning": "Good Morning",
+      "afternoon": "Good Afternoon",
+      "evening": "Good Evening"
+    },
+    "viewAll": "View All",
+    "lastUpdated": "Last updated",
+    "wsConnected": "WebSocket: Connected",
+    "ensembleActive": "5-Layer AI Ensemble active",
+    "aiEngineStatus": "AI Engine Status",
+    "lastAnalysis": "Last analysis",
+    "quickAccess": "Quick Access"
+  },
+  "news": {
+    "title": "FOREXAI News",
+    "edition": {
+      "morning": "Morning",
+      "noon": "Noon",
+      "evening": "Evening"
+    },
+    "executiveSummary": "Executive Summary",
+    "deepDive": {
+      "macro": "Macro Landscape",
+      "technical": "Technical Levels",
+      "centralBank": "Central Bank Watch",
+      "commodities": "Commodity Corner"
+    },
+    "sentiment": "Market Sentiment",
+    "blackRock": {
+      "title": "BlackRock Institutional View",
+      "quote": "We see selective opportunities in fixed income as yields remain elevated. The Fed's higher-for-longer stance supports the dollar but creates divergence trades.",
+      "points": [
+        "Overweight USD vs G10 on yield advantage",
+        "Credit quality differentiation is key",
+        "Duration risk should be managed actively",
+        "Emerging markets selective on fundamentals",
+        "Commodity-linked FX supported",
+        "Portfolio hedging remains cost-effective"
+      ]
+    },
+    "keyLevels": "Key Levels",
+    "generated": "Generated",
+    "listen": "Listen",
+    "playing": "Playing briefing...",
+    "nextEdition": "Next edition in",
+    "pageTitle": "Market Intelligence",
+    "pageSubtitle": "AI-powered daily briefings",
+    "pause": "Pause",
+    "listenTooltip": "Listen to briefing",
+    "generatingEdition": "Generating",
+    "topStories": "Top Stories",
+    "deepDiveTitle": "Deep Dive",
+    "editionBadge": "Edition",
+    "generatedAt": "Generated",
+    "sentimentLabel": "Sentiment",
+    "countdown": "Next edition in"
+  },
+  "forex": {
+    "title": "Forex Markets",
+    "source": "Source",
+    "spotlight": "Spotlight",
+    "allPairs": "All Pairs",
+    "pair": "Pair",
+    "price": "Price",
+    "change": "Change",
+    "high": "High",
+    "low": "Low",
+    "open": "Open",
+    "strength": "Strength",
+    "expanded": "Expanded View",
+    "nicknames": {
+      "EUR/USD": "The Fiber",
+      "GBP/USD": "The Cable",
+      "USD/JPY": "The Ninja",
+      "XAU/USD": "Gold"
+    },
+    "subtitle": "currency pairs • Real-time rates",
+    "categories": {
+      "all": "All",
+      "major": "Major",
+      "cross": "Cross",
+      "exotic": "Exotic"
+    },
+    "pairCount": "pairs",
+    "loadingRates": "Loading rates...",
+    "sourceLabel": "Source"
+  },
+  "crypto": {
+    "title": "Crypto Markets",
+    "stats": {
+      "marketCap": "Global Market Cap",
+      "fearGreed": "Fear & Greed",
+      "activePairs": "Active Pairs",
+      "greed": "Greed",
+      "fear": "Fear"
+    },
+    "orderBook": "Order Book",
+    "depthChart": "Depth Chart",
+    "topMovers": "Top Movers",
+    "price": "Price",
+    "change24h": "24h Change",
+    "volume": "Volume",
+    "subtitle": "20 Binance pairs • WebSocket real-time",
+    "reconnect": "Reconnect",
+    "pair": "Pair",
+    "high24h": "24h High",
+    "low24h": "24h Low",
+    "wsRealtime": "WebSocket real-time"
+  },
+  "search": {
+    "title": "Market Search",
+    "searchInstruments": "Search Instruments",
+    "trendAnalysis": "Trend Analysis",
+    "whaleActivity": "Whale Activity",
+    "relatedInstruments": "Related Instruments",
+    "subtitle": "Search any instrument — forex, crypto, gold, commodities",
+    "emptyState": "Start typing to search for instruments",
+    "trySearching": "Try: BTC, Gold, EUR/USD, SOL, Oil, XRP..."
+  },
+  "whales": {
+    "title": "Whale Tracking",
+    "filter": {
+      "all": "All Flows",
+      "inflows": "Inflows",
+      "outflows": "Outflows",
+      "large": "Large (>1B)"
+    },
+    "flowVisualization": "Institutional Pools",
+    "transactions": "Recent Transactions",
+    "aiAnalysis": "AI Analysis",
+    "generated": "Generated",
+    "institutional": "Institutional",
+    "inflow": "Inflow",
+    "outflow": "Outflow",
+    "subtitle": "Institutional flow monitoring • AI-powered analysis",
+    "trackedToday": "tracked today",
+    "netFlow": "Net Flow",
+    "filterLabel": "Filter",
+    "showingTransactions": "Showing {{count}} transactions"
+  },
+  "signals": {
+    "title": "AI Signal Center",
+    "subtitle": "5-Layer AI Ensemble",
+    "ensemble": "Ensemble",
+    "filter": {
+      "all": "All Directions",
+      "buy": "Buy",
+      "sell": "Sell",
+      "hold": "Hold"
+    },
+    "sort": {
+      "newest": "Newest",
+      "confidence": "Confidence",
+      "instrument": "Instrument"
+    },
+    "timeframe": {
+      "today": "Today",
+      "week": "This Week",
+      "all": "All Time"
+    },
+    "minConfidence": "Min Confidence",
+    "confidence": "Confidence",
+    "entry": "Entry",
+    "target": "Target",
+    "stop": "Stop",
+    "spread": "Spread",
+    "layer0": "Layer 0",
+    "layer1": "Layer 1",
+    "layer2": "Layer 2",
+    "layer3": "Layer 3",
+    "layer4": "Layer 4",
+    "pending": "Pending",
+    "status": {
+      "fresh": "Fresh",
+      "aging": "Aging",
+      "expiring": "Expiring",
+      "expired": "Expired"
+    },
+    "paused": {
+      "forex": "Forex auto-refresh paused — active Mon–Fri 07:00–16:00 local. Click Refresh for an on-demand signal.",
+      "crypto": "Crypto auto-refresh paused — active daily 07:00–16:00 local. Click Refresh for an on-demand signal."
+    },
+    "manual": "MANUAL",
+    "autoRefreshIn": "Auto-refresh in",
+    "noSignals": "No signals match your filters.",
+    "pipeline": {
+      "layer0": "Technical Analysis",
+      "layer1": "Macro Scout",
+      "layer2": "Pattern Recognition",
+      "layer3": "Synthesis",
+      "layer4": "Final Verdict"
+    },
+    "refreshTitle": "Refresh signals",
+    "description": "Multi-model AI consensus for market signals",
+    "activeCount": "{{count}} Active",
+    "winRate": "{{rate}}% Win Rate",
+    "lastRun": "Last run: {{minutes}}m ago",
+    "pipelineLabel": "Pipeline",
+    "minLabel": "Min",
+    "ensembleToggle": "Ensemble",
+    "active": "Active"
+  },
+  "vision": {
+    "title": "Chart Vision",
+    "subtitle": "AI-powered chart analysis with visual overlays",
+    "dropzone": "Drop your chart here",
+    "dropActive": "Drop to analyze",
+    "claudeReady": "Claude Vision: Ready",
+    "claudeAnalyzing": "Claude Vision: Analyzing...",
+    "supportedFormats": "Supported: PNG, JPG, WEBP",
+    "pasteScreenshot": "Or paste a screenshot (Ctrl+V)",
+    "assessment": "Overall Assessment",
+    "keyLevels": "Key Levels",
+    "patternRecognition": "Pattern Recognition",
+    "trendAnalysis": "Trend Analysis",
+    "recommendation": "Recommendation",
+    "showRaw": "Show Raw Analysis",
+    "hideRaw": "Hide Raw Analysis",
+    "recentAnalyses": "Recent Analyses",
+    "sentiment": "Sentiment",
+    "score": "Score",
+    "analysesCached": "{{count}}/20 analyses cached",
+    "newChart": "New Chart",
+    "analysisComplete": "Analysis complete",
+    "analyzing": "Analyzing...",
+    "analyzingHint": "This may take 10-30 seconds",
+    "analysisFailed": "Analysis failed",
+    "uploadPrompt": "Upload a chart to see analysis",
+    "overallAssessment": "Overall Assessment",
+    "confidence": "Confidence",
+    "supports": "Supports",
+    "resistances": "Resistances",
+    "noSupports": "No clear supports detected",
+    "noResistances": "No clear resistances detected",
+    "noPatterns": "No clear patterns detected",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "trendStrength": "Trend Strength",
+    "entry": "Entry",
+    "stopLoss": "Stop Loss",
+    "riskReward": "R:R"
+  },
+  "logicLab": {
+    "title": "Logic Lab",
+    "subtitle": "Multi-Agent AI Debate & Reasoning",
+    "placeholderActive": "Send a message to the debate...",
+    "placeholderIdle": "Enter a market topic to debate...",
+    "session": {
+      "active": "Active Session",
+      "idle": "Idle"
+    },
+    "agents": {
+      "bull": "Bull Advocate",
+      "bear": "Bear Advocate",
+      "neutral": "Neutral Analyst",
+      "arbitrator": "Arbitrator",
+      "bullShort": "Bull",
+      "bearShort": "Bear",
+      "neutralShort": "Neutral"
+    },
+    "status": {
+      "thinking": "Thinking...",
+      "speaking": "Speaking",
+      "idle": "Idle"
+    },
+    "verdict": {
+      "title": "Final Verdict",
+      "viewReasoning": "View Full Reasoning",
+      "hideReasoning": "Hide Full Reasoning"
+    },
+    "description": "3 AI agents debate market scenarios. Kimi arbitrates.",
+    "agentsActive": "{{count}}/4 Agents Active",
+    "roundOf": "Round {{current}} of {{total}}",
+    "debateTranscript": "Debate Transcript",
+    "stop": "Stop",
+    "startDebate": "Start Debate",
+    "nextRound": "Next Round",
+    "roundsLabel": "Rounds",
+    "pastSessions": "Past Sessions",
+    "tableHeaders": {
+      "topic": "Topic",
+      "agents": "Agents",
+      "rounds": "Rounds",
+      "outcome": "Outcome",
+      "date": "Date"
+    },
+    "roleLabels": {
+      "bull": "Bull",
+      "bear": "Bear",
+      "neutral": "Neutral",
+      "arbitrator": "Arbitrator"
+    }
+  },
+  "footer": {
+    "apis": "Data Sources",
+    "yahooFinance": "Yahoo Finance",
+    "binance": "Binance",
+    "perplexity": "Perplexity",
+    "deepSeek": "DeepSeek",
+    "claude": "Claude"
+  },
+  "time": {
+    "nextUpdate": "Next update in",
+    "lastUpdate": "Last update",
+    "utc": "UTC"
+  },
+  "edition": {
+    "morning": "Morning",
+    "noon": "Noon",
+    "evening": "Evening"
+  }
+}
