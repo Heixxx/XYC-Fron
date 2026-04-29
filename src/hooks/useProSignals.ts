@@ -3,6 +3,13 @@ import type { Signal } from './useSignals';
 import type { Candidate } from './useSignals';
 
 const ENGINE_URL = (import.meta.env.VITE_FOREXAI_ENGINE_URL as string) || '';
+const ENGINE_KEY = (import.meta.env.VITE_INTERNAL_API_KEY as string) || '';
+
+function engineHeaders(extra: Record<string, string> = {}): HeadersInit {
+  const h: Record<string, string> = { 'Content-Type': 'application/json', ...extra };
+  if (ENGINE_KEY) h['Authorization'] = `Bearer ${ENGINE_KEY}`;
+  return h;
+}
 
 export type ProState = 'idle' | 'loading' | 'success' | 'error' | 'not-configured';
 
@@ -32,7 +39,9 @@ export function useProSignals(category: 'FOREX' | 'CRYPTO'): UseProSignals {
   const refresh = useCallback(async () => {
     if (category !== 'FOREX' || !ENGINE_URL) return;
     try {
-      const res = await fetch(`${ENGINE_URL}/api/signals?tier=PRO`);
+      const res = await fetch(`${ENGINE_URL}/api/signals?tier=PRO`, {
+        headers: engineHeaders(),
+      });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       if (Array.isArray(data.signals)) {
@@ -63,7 +72,7 @@ export function useProSignals(category: 'FOREX' | 'CRYPTO'): UseProSignals {
     try {
       const res = await fetch(`${ENGINE_URL}/api/council`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: engineHeaders(),
         body: JSON.stringify({ candidates: candidates.slice(0, 5) }),
       });
       if (!res.ok) {
