@@ -34,7 +34,7 @@ export default function InstrumentProfile({ item }: InstrumentProfileProps) {
             low: parseFloat(json.lowPrice),
           });
         } else {
-          const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${item.sym}?interval=1d&range=2d`);
+          const res = await fetch(`/api/yahoo-chart?symbol=${encodeURIComponent(item.sym)}&interval=1d&range=2d`);
           if (!res.ok) return;
           const json = await res.json();
           const result = json.chart?.result?.[0];

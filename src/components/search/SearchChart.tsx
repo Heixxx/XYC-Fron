@@ -55,7 +55,7 @@ export default function SearchChart({ symbol, type, height = 500 }: SearchChartP
           // Yahoo Finance
           const range = activeInterval === '15m' ? '1d' : activeInterval === '1h' ? '5d' : activeInterval === '4h' ? '1mo' : activeInterval === '1d' ? '3mo' : '1y';
           const iv = activeInterval === '15m' ? '15m' : activeInterval === '1h' ? '1h' : activeInterval === '4h' ? '1h' : '1d';
-          const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=${iv}&range=${range}`);
+          const res = await fetch(`/api/yahoo-chart?symbol=${encodeURIComponent(symbol)}&interval=${iv}&range=${range}`);
           if (!res.ok) throw new Error();
           const json = await res.json();
           const result = json.chart?.result?.[0];

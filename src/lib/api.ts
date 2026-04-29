@@ -84,7 +84,7 @@ export async function fetchYahooChart(
   range: string = "1d"
 ): Promise<{ prices: number[]; timestamps: number[] } | null> {
   try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=${interval}&range=${range}`;
+    const url = `/api/yahoo-chart?symbol=${encodeURIComponent(symbol)}&interval=${interval}&range=${range}`;
     const res = await fetch(url, {
       headers: { Accept: "application/json" },
       signal: AbortSignal.timeout(10000),
@@ -105,7 +105,7 @@ export async function fetchYahooChart(
 // ---- Yahoo Finance v7 quote (primary for rates) ----
 export async function fetchYahooQuotes(quoteStr: string): Promise<Record<string, FxRate> | null> {
   try {
-    const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(quoteStr)}`;
+    const url = `/api/yahoo-quote?symbols=${encodeURIComponent(quoteStr)}`;
     const res = await fetch(url, {
       headers: { Accept: "application/json" },
       signal: AbortSignal.timeout(10000),
