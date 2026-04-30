@@ -1,6 +1,7 @@
 // ============================================================
 // Shared API Client — FOREXAI Terminal
 // ============================================================
+import { callDeepSeek as _callDeepSeek, callPerplexity as _callPerplexity } from './ai-api';
 
 // ---- Polyfill: AbortSignal.timeout for older browsers ----
 if (typeof AbortSignal !== 'undefined' && !('timeout' in AbortSignal)) {
@@ -287,8 +288,24 @@ export async function fetchForexRates(): Promise<{
 
 // ---- News Generation API ----
 
-const DEEPSEEK_KEY = import.meta.env.VITE_DEEPSEEK_API_KEY ?? '';
-const PERPLEXITY_KEY = import.meta.env.VITE_PERPLEXITY_API_KEY ?? '';
+// LLM calls delegate to ai-api.ts (single source of keys)
+async function callPerplexity(prompt: string): Promise<string | null> {
+  try {
+    const r = await _callPerplexity([{ role: 'user', content: prompt }]);
+    return r.content || null;
+  } catch {
+    return null;
+  }
+}
+
+async function callDeepSeek(prompt: string): Promise<string | null> {
+  try {
+    const r = await _callDeepSeek([{ role: 'user', content: prompt }]);
+    return r.content || null;
+  } catch {
+    return null;
+  }
+}
 
 export interface NewsArticle {
   id: string;
@@ -309,52 +326,6 @@ export interface EditionData {
   sentiment: { score: number; label: string; pairScores: Record<string, number> };
   keyLevels: Array<{ pair: string; support: string; resistance: string; pivot: string }>;
   deepDive: { macro: string; technical: string; centralBank: string; commodities: string };
-}
-
-async function callPerplexity(prompt: string): Promise<string | null> {
-  try {
-    const res = await fetch("https://api.perplexity.ai/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${PERPLEXITY_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "sonar",
-        messages: [{ role: "user", content: prompt }],
-        max_tokens: 2000,
-      }),
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) return null;
-    const json = await res.json();
-    return json.choices?.[0]?.message?.content || null;
-  } catch {
-    return null;
-  }
-}
-
-async function callDeepSeek(prompt: string): Promise<string | null> {
-  try {
-    const res = await fetch("https://api.deepseek.com/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${DEEPSEEK_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "deepseek-v4-pro",
-        messages: [{ role: "user", content: prompt }],
-        max_tokens: 2000,
-      }),
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) return null;
-    const json = await res.json();
-    return json.choices?.[0]?.message?.content || null;
-  } catch {
-    return null;
-  }
 }
 
 // Generate news for an edition

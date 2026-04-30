@@ -1,7 +1,10 @@
 // src/lib/twelvedata.ts — Twelve Data REST client with in-memory cache
 
-const TD_KEY = import.meta.env.VITE_TWELVEDATA_API_KEY || '';
-const TD_BASE = 'https://api.twelvedata.com';
+const TD_KEY = import.meta.env.VITE_TWELVEDATA_API_KEY || '';if (!TD_KEY) {
+  console.error(
+    '[twelvedata] VITE_TWELVEDATA_API_KEY is not set. Forex candles will fail. Set it in Vercel or .env.local.'
+  );
+}const TD_BASE = 'https://api.twelvedata.com';
 
 export type Timeframe = '15min' | '1h' | '4h' | '1day';
 

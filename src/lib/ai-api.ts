@@ -1,5 +1,12 @@
 // AI API wrappers for FOREXAI Terminal
-// Handles DeepSeek, Claude, Perplexity, and Kimi APIs with fallback logic
+// Handles DeepSeek, Claude, and Perplexity APIs with fallback logic
+// Keys are read from Vite env vars — set them in Vercel or .env.local
+
+function warnMissingKey(name: string, envVar: string) {
+  console.error(
+    `[ai-api] ${name} API key is missing. Set ${envVar} in your environment.`
+  );
+}
 
 export interface ChatMessage {
   role: 'user' | 'assistant' | 'system';
@@ -13,7 +20,7 @@ export interface APIResponse {
 }
 
 // ─── DeepSeek API ──────────────────────────────────────────────
-const DEEPSEEK_KEY = import.meta.env.VITE_DEEPSEEK_API_KEY ?? '';
+const DEEPSEEK_KEY: string = import.meta.env.VITE_DEEPSEEK_API_KEY ?? '';
 const DEEPSEEK_URL = 'https://api.deepseek.com/chat/completions';
 
 export interface CallDeepSeekOpts {
@@ -27,6 +34,10 @@ export async function callDeepSeek(
   model = 'deepseek-chat',
   opts?: CallDeepSeekOpts
 ): Promise<APIResponse> {
+  if (!DEEPSEEK_KEY) {
+    warnMissingKey('DeepSeek', 'VITE_DEEPSEEK_API_KEY');
+    throw new Error('DeepSeek API key not configured');
+  }
   const start = performance.now();
   const body: Record<string, unknown> = {
     model,
@@ -157,13 +168,17 @@ export async function callClaudeVision(
 }
 
 // ─── Perplexity API ────────────────────────────────────────────
-const PERPLEXITY_KEY = import.meta.env.VITE_PERPLEXITY_API_KEY ?? '';
+const PERPLEXITY_KEY: string = import.meta.env.VITE_PERPLEXITY_API_KEY ?? '';
 const PERPLEXITY_URL = 'https://api.perplexity.ai/chat/completions';
 
 export async function callPerplexity(
   messages: ChatMessage[],
   model = 'sonar'
 ): Promise<APIResponse> {
+  if (!PERPLEXITY_KEY) {
+    warnMissingKey('Perplexity', 'VITE_PERPLEXITY_API_KEY');
+    throw new Error('Perplexity API key not configured');
+  }
   const start = performance.now();
   const res = await fetch(PERPLEXITY_URL, {
     method: 'POST',
@@ -209,24 +224,28 @@ export async function callPerplexityCached(
   }
   return result;
 }
+// ─── Kimi (Moonshot AI) API ───────────────────────────────────
+const KIMI_KEY: string = import.meta.env.VITE_KIMI_API_KEY ?? '';
 const KIMI_URL = 'https://api.moonshot.cn/v1/chat/completions';
 
 export async function callKimi(
   messages: ChatMessage[],
   model = 'moonshot-v1-8k'
 ): Promise<APIResponse> {
-  // Kimi key is expired (401), this will typically fall back
+  if (!KIMI_KEY) {
+    warnMissingKey('Kimi', 'VITE_KIMI_API_KEY');
+    throw new Error('Kimi API key not configured');
+  }
   const start = performance.now();
   const res = await fetch(KIMI_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      // No valid key available - will 401
-      Authorization: 'Bearer invalid-key',
+      Authorization: `Bearer ${KIMI_KEY}`,
     },
     body: JSON.stringify({ model, messages, temperature: 0.7, max_tokens: 2048 }),
   });
-  if (!res.ok) throw new Error(`Kimi ${res.status}: Key expired`);
+  if (!res.ok) throw new Error(`Kimi ${res.status}: ${await res.text()}`);
   const data = await res.json();
   return {
     content: data.choices?.[0]?.message?.content || '',
@@ -236,12 +255,14 @@ export async function callKimi(
 }
 
 // ─── Unified caller with fallback ──────────────────────────────
+export type AIProvider = 'deepseek' | 'claude' | 'perplexity' | 'kimi';
+
 export async function callAIWithFallback(
-  primary: 'deepseek' | 'claude' | 'perplexity' | 'kimi',
+  primary: AIProvider,
   messages: ChatMessage[],
-  fallbacks: ('deepseek' | 'claude' | 'perplexity' | 'kimi')[] = []
+  fallbacks: AIProvider[] = []
 ): Promise<APIResponse> {
-  const callers: Record<string, (m: ChatMessage[]) => Promise<APIResponse>> = {
+  const callers: Record<AIProvider, (m: ChatMessage[]) => Promise<APIResponse>> = {
     deepseek: callDeepSeek,
     claude: callClaude,
     perplexity: callPerplexity,
